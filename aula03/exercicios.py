@@ -53,7 +53,7 @@ logs = [
 
 for log in logs:
     if log.get('level') == 'ERROR':
-        print(f"Operação com falha crítica")
+        print(f"Operação com falha crítica - {log.get('message')}")
 
 
 
