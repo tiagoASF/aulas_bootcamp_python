@@ -25,15 +25,15 @@
 # Os dados incluem medições de temperatura. Você precisa classificar cada leitura 
 # como 'Baixa', 'Normal' ou 'Alta'. Considerando que:
 
-temperaturas_celcius = [10, 0, -20, -5, 1.45, 9, 79, 251, -0.01, 0, 55, 2, 4.5, 89]
+# temperaturas_celcius = [10, 0, -20, -5, 1.45, 9, 79, 251, -0.01, 0, 55, 2, 4.5, 89]
 
-for temperatura in temperaturas_celcius:
-    if temperatura <= 5:
-        print(f"{temperatura}ºc: Baixa")
-    elif temperatura > 5 and temperatura < 35: 
-        print(f"{temperatura}ºc: Normal")
-    else:
-        print(f"{temperatura}ºc: Alta")
+# for temperatura in temperaturas_celcius:
+#     if temperatura <= 5:
+#         print(f"{temperatura}ºc: Baixa")
+#     elif temperatura > 5 and temperatura < 35: 
+#         print(f"{temperatura}ºc: Normal")
+#     else:
+#         print(f"{temperatura}ºc: Alta")
 
 
 
@@ -43,6 +43,22 @@ for temperatura in temperaturas_celcius:
 # com severidade 'ERROR'. Dado um registro de log em formato de dicionário 
 # como `log = {'timestamp': '2021-06-23 10:00:00', 'level': 'ERROR', 'message': 'Falha na conexão'}`, 
 # escreva um programa que imprima a mensagem se a severidade for 'ERROR'.
+
+logs = [
+        {'timestamp': '2021-06-23 10:00:00', 'level': 'NORMAL', 'message': 'Falha na conexão'},
+        {'timestamp': '2021-06-23 10:00:00', 'level': 'ERROR', 'message': 'Falha na conexão'},
+        {'timestamp': '2021-06-23 10:00:00', 'level': 'NORMAL', 'message': 'Falha na conexão'},
+        {'timestamp': '2021-06-23 10:00:00', 'level': 'ERROR', 'message': 'Falha no banco de dados'}
+    ]
+
+for log in logs:
+    if log.get('level') == 'ERROR':
+        print(f"Operação com falha crítica")
+
+
+
+
+
 
 ### Exercício 4: Validação de Dados de Entrada
 # Antes de processar os dados de usuários em um sistema de recomendação, 
