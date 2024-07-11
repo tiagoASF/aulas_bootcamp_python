@@ -1,3 +1,6 @@
+import sys
+
+
 ### Exercício 1: Verificação de Qualidade de Dados
 # Você está analisando um conjunto de dados de vendas e precisa garantir 
 # que todos os registros tenham valores positivos para `quantidade` e `preço`. 
@@ -44,19 +47,16 @@
 # como `log = {'timestamp': '2021-06-23 10:00:00', 'level': 'ERROR', 'message': 'Falha na conexão'}`, 
 # escreva um programa que imprima a mensagem se a severidade for 'ERROR'.
 
-logs = [
-        {'timestamp': '2021-06-23 10:00:00', 'level': 'NORMAL', 'message': 'Falha na conexão'},
-        {'timestamp': '2021-06-23 10:00:00', 'level': 'ERROR', 'message': 'Falha na conexão'},
-        {'timestamp': '2021-06-23 10:00:00', 'level': 'NORMAL', 'message': 'Falha na conexão'},
-        {'timestamp': '2021-06-23 10:00:00', 'level': 'ERROR', 'message': 'Falha no banco de dados'}
-    ]
+# logs = [
+#         {'timestamp': '2021-06-23 10:00:00', 'level': 'NORMAL', 'message': 'Falha na conexão'},
+#         {'timestamp': '2021-06-23 10:00:00', 'level': 'ERROR', 'message': 'Falha na conexão'},
+#         {'timestamp': '2021-06-23 10:00:00', 'level': 'NORMAL', 'message': 'Falha na conexão'},
+#         {'timestamp': '2021-06-23 10:00:00', 'level': 'ERROR', 'message': 'Falha no banco de dados'}
+#     ]
 
-for log in logs:
-    if log.get('level') == 'ERROR':
-        print(f"Operação com falha crítica - {log.get('message')}")
-
-
-
+# for log in logs:
+#     if log.get('level') == 'ERROR':
+#         print(f"Operação com falha crítica - {log.get('message')}")
 
 
 
@@ -65,6 +65,29 @@ for log in logs:
 # você precisa garantir que cada usuário tenha idade entre 18 e 65 anos e tenha 
 # fornecido um email válido. Escreva um programa que valide essas condições 
 # e imprima "Dados de usuário válidos" ou o erro específico encontrado.
+
+nome_usuario = input("Informe o nome do usuário: ")
+email_usuario = input("E-mail: ")
+idade_usuario = int(input("Idade: "))
+
+if not (idade_usuario >= 18 and idade_usuario <= 65):
+    print(f"Usuário {nome_usuario} não cadastrado. Idade inválida")
+    sys.exit(1)
+else:
+    print("Data de nascimento válida. Próxima etapa, verificando e-mail...")
+
+if (("@" not in email_usuario) or ("." not in email_usuario)):
+    print("E-mail inválido")
+    print("Cadastro interrompido.")
+    sys.exit(1)
+else: 
+    print("E-mail válido. Cadastro completo!")
+
+
+
+
+
+
 
 ### Exercício 5: Detecção de Anomalias em Dados de Transações
 # Você está trabalhando em um sistema de detecção de fraude e precisa identificar 
