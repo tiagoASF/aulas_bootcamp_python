@@ -5,23 +5,38 @@
 # forem positivos ou "Dados inválidos" caso contrário.
 
 
-dados_vendas = [(10,10), (1,5), (1000,34),(4,50),(55,50),(1,500),(2,25.50),(67,4),(9,3),(1,55),(1,23),(5,100.2),(-3,56.78),(2,1),(2,0.99)]
+# dados_vendas = [(10,10), (1,5), (1000,34),(4,50),(55,50),(1,500),(2,25.50),(67,4),(9,3),(1,55),(1,23),(5,100.2),(-3,56.78),(2,1),(2,0.99)]
 
-dados_validos = True
+# dados_validos = True
 
-for venda in dados_vendas:
-    if venda[0] < 0 or venda[1] < 0:
-        dados_validos = False
+# for venda in dados_vendas:
+#     if venda[0] < 0 or venda[1] < 0:
+#         dados_validos = False
         
-if dados_validos:
-    print("Dados de venda válidos")
-else:
-    print("Dados inválidos. Verifique os valores e quantidades lançados")
+# if dados_validos:
+#     print("Dados de venda válidos")
+# else:
+#     print("Dados inválidos. Verifique os valores e quantidades lançados")
+
+
 
 ### Exercício 2: Classificação de Dados de Sensor
 # Imagine que você está trabalhando com dados de sensores IoT. 
 # Os dados incluem medições de temperatura. Você precisa classificar cada leitura 
 # como 'Baixa', 'Normal' ou 'Alta'. Considerando que:
+
+temperaturas_celcius = [10, 0, -20, -5, 1.45, 9, 79, 251, -0.01, 0, 55, 2, 4.5, 89]
+
+for temperatura in temperaturas_celcius:
+    if temperatura <= 5:
+        print(f"{temperatura}ºc: Baixa")
+    elif temperatura > 5 and temperatura < 35: 
+        print(f"{temperatura}ºc: Normal")
+    else:
+        print(f"{temperatura}ºc: Alta")
+
+
+
 
 ### Exercício 3: Filtragem de Logs por Severidade
 # Você está analisando logs de uma aplicação e precisa filtrar mensagens 
