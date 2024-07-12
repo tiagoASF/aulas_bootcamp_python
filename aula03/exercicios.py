@@ -66,26 +66,22 @@ import sys
 # fornecido um email válido. Escreva um programa que valide essas condições 
 # e imprima "Dados de usuário válidos" ou o erro específico encontrado.
 
-nome_usuario = input("Informe o nome do usuário: ")
-email_usuario = input("E-mail: ")
-idade_usuario = int(input("Idade: "))
+# nome_usuario = input("Informe o nome do usuário: ")
+# email_usuario = input("E-mail: ")
+# idade_usuario = int(input("Idade: "))
 
-if not (idade_usuario >= 18 and idade_usuario <= 65):
-    print(f"Usuário {nome_usuario} não cadastrado. Idade inválida")
-    sys.exit(1)
-else:
-    print("Data de nascimento válida. Próxima etapa, verificando e-mail...")
+# if not (idade_usuario >= 18 and idade_usuario <= 65):
+#     print(f"Usuário {nome_usuario} não cadastrado. Idade inválida")
+#     sys.exit(1)
+# else:
+#     print("Data de nascimento válida. Próxima etapa, verificando e-mail...")
 
-if (("@" not in email_usuario) or ("." not in email_usuario)):
-    print("E-mail inválido")
-    print("Cadastro interrompido.")
-    sys.exit(1)
-else: 
-    print("E-mail válido. Cadastro completo!")
-
-
-
-
+# if (("@" not in email_usuario) or ("." not in email_usuario)):
+#     print("E-mail inválido")
+#     print("Cadastro interrompido.")
+#     sys.exit(1)
+# else: 
+#     print("E-mail válido. Cadastro completo!")
 
 
 
@@ -94,6 +90,24 @@ else:
 # transações suspeitas. Uma transação é considerada suspeita se o valor for superior 
 # a R$ 10.000 ou se ocorrer fora do horário comercial (antes das 9h ou depois das 18h). 
 # Dada uma transação como `transacao = {'valor': 12000, 'hora': 20}`, verifique se ela é suspeita.
+
+transacoes = [
+    {'id': 1, 'valor': 12001, 'hora': 12},
+    {'id': 2, 'valor': 7000, 'hora': 14},
+    {'id': 3, 'valor': 6500, 'hora': 12},
+    {'id': 4, 'valor': 100, 'hora': 1},
+    {'id': 5, 'valor': 39000, 'hora': 20}
+]
+
+for transacao in transacoes:
+    if transacao.get('valor') > 12000 or transacao.get('hora') > 18 or transacao.get('hora') < 9:
+        print(f"ALERTA: transação nº{transacao.get('id')} suspeita")
+        print(transacao)
+print("Analise completa")
+
+
+
+
 
 ### Exercício 6. Contagem de Palavras em Textos
 # Objetivo:** Dado um texto, contar quantas vezes cada palavra única aparece nele.
