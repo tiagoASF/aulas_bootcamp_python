@@ -91,26 +91,54 @@ import sys
 # a R$ 10.000 ou se ocorrer fora do horário comercial (antes das 9h ou depois das 18h). 
 # Dada uma transação como `transacao = {'valor': 12000, 'hora': 20}`, verifique se ela é suspeita.
 
-transacoes = [
-    {'id': 1, 'valor': 12001, 'hora': 12},
-    {'id': 2, 'valor': 7000, 'hora': 14},
-    {'id': 3, 'valor': 6500, 'hora': 12},
-    {'id': 4, 'valor': 100, 'hora': 1},
-    {'id': 5, 'valor': 39000, 'hora': 20}
-]
+# transacoes = [
+#     {'id': 1, 'valor': 12001, 'hora': 12},
+#     {'id': 2, 'valor': 7000, 'hora': 14},
+#     {'id': 3, 'valor': 6500, 'hora': 12},
+#     {'id': 4, 'valor': 100, 'hora': 1},
+#     {'id': 5, 'valor': 39000, 'hora': 20}
+# ]
 
-for transacao in transacoes:
-    if transacao.get('valor') > 12000 or transacao.get('hora') > 18 or transacao.get('hora') < 9:
-        print(f"ALERTA: transação nº{transacao.get('id')} suspeita")
-        print(transacao)
-print("Analise completa")
-
-
-
+# for transacao in transacoes:
+#     if transacao.get('valor') > 12000 or transacao.get('hora') > 18 or transacao.get('hora') < 9:
+#         print(f"ALERTA: transação nº{transacao.get('id')} suspeita")
+#         print(transacao)
+# print("Analise completa")
 
 
 ### Exercício 6. Contagem de Palavras em Textos
 # Objetivo:** Dado um texto, contar quantas vezes cada palavra única aparece nele.
+
+# texto = "O rato roeu a roupa do rei de Roma."
+texto = "Here what you learn in this tutorial: You cover the basic characteristics of Python dictionaries and learn how to access and manage dictionary data. Once you have finished this tutorial, you should have a good sense of when a dictionary is the appropriate data type to use, and how to do so."
+
+palavras = texto.strip().split(" ")
+palavras_semanticas = []
+contador_de_palavras = {}
+
+for palavra in palavras:
+    if (len(palavra) >= 3):
+        palavras_semanticas.append(palavra)
+print(palavras_semanticas)
+
+for palavra in palavras_semanticas:
+    if palavra in contador_de_palavras:
+        contador_de_palavras[palavra] += 1
+    else:
+        contador_de_palavras[palavra] = 1
+
+print(contador_de_palavras)
+
+
+
+
+
+
+
+
+
+
+
 
 ### Exercício 7. Normalização de Dados
 # Objetivo:** Normalizar uma lista de números para que fiquem na escala de 0 a 1.
