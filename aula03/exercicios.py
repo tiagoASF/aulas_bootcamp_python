@@ -235,23 +235,34 @@ texto = "Here what you learn in this tutorial: You cover the basic characteristi
 
 ### Exercício 11. Leitura de Dados até Flag
 # Ler dados de entrada até que uma palavra-chave específica ("sair") seja fornecida.
-palavra = ""
-palavras_digitas = []
+# palavra = ""
+# palavras_digitas = []
 
-while palavra != "sair":
-    palavra = input("insira uma palavra ('sair' para encerrar): " )
-    palavras_digitas.append(palavra)
+# while palavra != "sair":
+#     palavra = input("insira uma palavra ('sair' para encerrar): " )
+#     palavras_digitas.append(palavra)
     
-palavras_digitas.pop(-1)    
-print("Encerrando")
-print(palavras_digitas)
-
-
-
+# palavras_digitas.pop(-1)    
+# print("Encerrando")
+# print(palavras_digitas)
 
 
 ### Exercício 12. Validação de Entrada
 # Solicitar ao usuário um número dentro de um intervalo específico até que a entrada seja válida.
+
+numero = None
+secrets = [1, 3, 4, 5, 6, 99]
+
+while numero not in secrets:
+    numero = int(input("Insira um valor inteiro: "))
+    print("Você errou!")
+
+print("Você acertou o segredo👌")
+
+
+
+
+
 
 ### Exercício 13. Consumo de API Simulado
 # Simular o consumo de uma API paginada, onde cada "página" de dados é processada em loop até que não haja mais páginas.
