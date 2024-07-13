@@ -207,41 +207,27 @@ texto = "Here what you learn in this tutorial: You cover the basic characteristi
 # Objetivo:** Dado um conjunto de registros de vendas, calcular o total de 
 # vendas por categoria.
 
-vendas = [
-    {"categoria": "eletrônicos", "valor": 1200},
-    {"categoria": "livros", "valor": 200},
-    {"categoria": "eletrônicos", "valor": 800},
-    {"categoria": "livros", "valor": 100},
-    {"categoria": "livros", "valor": 50},
-    {"categoria": "livros", "valor": 10},
-    {"categoria": "eletrônicos", "valor": 800}
-]
+# vendas = [
+#     {"categoria": "eletrônicos", "valor": 1200},
+#     {"categoria": "livros", "valor": 200},
+#     {"categoria": "eletrônicos", "valor": 800},
+#     {"categoria": "livros", "valor": 100},
+#     {"categoria": "livros", "valor": 50},
+#     {"categoria": "livros", "valor": 10},
+#     {"categoria": "eletrônicos", "valor": 800}
+# ]
 
-vendas_por_categoria = {}
+# vendas_por_categoria = {}
 
-for venda in vendas:
-    categoria = venda["categoria"]
-    valor = venda["valor"]
-    if (categoria in vendas_por_categoria):
-        vendas_por_categoria[categoria] += valor
-    else:
-        vendas_por_categoria[categoria] = valor
+# for venda in vendas:
+#     categoria = venda["categoria"]
+#     valor = venda["valor"]
+#     if (categoria in vendas_por_categoria):
+#         vendas_por_categoria[categoria] += valor
+#     else:
+#         vendas_por_categoria[categoria] = valor
 
-print(vendas_por_categoria)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+# print(vendas_por_categoria)
 
 
 
@@ -249,6 +235,20 @@ print(vendas_por_categoria)
 
 ### Exercício 11. Leitura de Dados até Flag
 # Ler dados de entrada até que uma palavra-chave específica ("sair") seja fornecida.
+palavra = ""
+palavras_digitas = []
+
+while palavra != "sair":
+    palavra = input("insira uma palavra ('sair' para encerrar): " )
+    palavras_digitas.append(palavra)
+    
+palavras_digitas.pop(-1)    
+print("Encerrando")
+print(palavras_digitas)
+
+
+
+
 
 ### Exercício 12. Validação de Entrada
 # Solicitar ao usuário um número dentro de um intervalo específico até que a entrada seja válida.
