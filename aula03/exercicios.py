@@ -136,23 +136,27 @@ texto = "Here what you learn in this tutorial: You cover the basic characteristi
 
 numeros = [10, 20, 30, 40, 50, 60]
 # numeros = [10, -2, 3, 330, 3, 6.0]
-numeros_normalizados = []
-min_numero = numeros[0]
-max_numero = numeros[0]
+# numeros_normalizados = []
+# min_numero = numeros[0]
+# max_numero = numeros[0]
 
-for numero in numeros:
-    if numero > max_numero:
-        max_numero = numero
-    if numero < min_numero:
-        min_numero = numero
+# for numero in numeros:
+#     if numero > max_numero:
+#         max_numero = numero
+#     if numero < min_numero:
+#         min_numero = numero
 
-for numero in numeros:
-    numeros_normalizados.append((numero - min_numero) / (max_numero - min_numero))
+# for numero in numeros:
+#     numeros_normalizados.append((numero - min_numero) / (max_numero - min_numero))
 
-print(numeros_normalizados)
+# print(numeros_normalizados)
 
+## OUTRA RESOLUCAO
+min = min(numeros)
+max = max(numeros)
+normalizados = [((numero - min) / (max - min)) for numero in numeros]
 
-
+print(normalizados)
 
 
 
