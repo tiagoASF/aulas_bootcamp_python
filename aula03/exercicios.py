@@ -187,33 +187,63 @@ texto = "Here what you learn in this tutorial: You cover the basic characteristi
 ### Exercício 9. Extração de Subconjuntos de Dados
 # Objetivo:** Dada uma lista de números, extrair apenas aqueles que são pares.
 
-numeros = [1, 20, 33, 40 -6, 0, 201, 20, 66, 15, 11]
+# numeros = [1, 20, 33, 40 -6, 0, 201, 20, 66, 15, 11]
 
-numeros_pares = []
-numeros_impares = []
+# numeros_pares = []
+# numeros_impares = []
 
-for numero in numeros:
-    if numero % 2 == 0:
-        numeros_pares.append(numero)
-    else:
-        numeros_impares.append(numero)
+# for numero in numeros:
+#     if numero % 2 == 0:
+#         numeros_pares.append(numero)
+#     else:
+#         numeros_impares.append(numero)
 
-print(numeros_pares)
-print(numeros_impares)
-
-
-
-
-
-
-
-
-
+# print(numeros_pares)
+# print(numeros_impares)
 
 
 
 ### Exercício 10. Agregação de Dados por Categoria
-# Objetivo:** Dado um conjunto de registros de vendas, calcular o total de vendas por categoria.
+# Objetivo:** Dado um conjunto de registros de vendas, calcular o total de 
+# vendas por categoria.
+
+vendas = [
+    {"categoria": "eletrônicos", "valor": 1200},
+    {"categoria": "livros", "valor": 200},
+    {"categoria": "eletrônicos", "valor": 800},
+    {"categoria": "livros", "valor": 100},
+    {"categoria": "livros", "valor": 50},
+    {"categoria": "livros", "valor": 10},
+    {"categoria": "eletrônicos", "valor": 800}
+]
+
+vendas_por_categoria = {}
+
+for venda in vendas:
+    categoria = venda["categoria"]
+    valor = venda["valor"]
+    if (categoria in vendas_por_categoria):
+        vendas_por_categoria[categoria] += valor
+    else:
+        vendas_por_categoria[categoria] = valor
+
+print(vendas_por_categoria)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ### Exercícios com WHILE
 
