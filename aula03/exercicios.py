@@ -1,4 +1,5 @@
 import sys
+import time
 
 
 ### Exercício 1: Verificação de Qualidade de Dados
@@ -110,7 +111,7 @@ import sys
 # Objetivo:** Dado um texto, contar quantas vezes cada palavra única aparece nele.
 
 # texto = "O rato roeu a roupa do rei de Roma."
-texto = "Here what you learn in this tutorial: You cover the basic characteristics of Python dictionaries and learn how to access and manage dictionary data. Once you have finished this tutorial, you should have a good sense of when a dictionary is the appropriate data type to use, and how to do so."
+# texto = "Here what you learn in this tutorial: You cover the basic characteristics of Python dictionaries and learn how to access and manage dictionary data. Once you have finished this tutorial, you should have a good sense of when a dictionary is the appropriate data type to use, and how to do so."
 
 # palavras = texto.strip().split(" ")
 # palavras_semanticas = []
@@ -250,22 +251,32 @@ texto = "Here what you learn in this tutorial: You cover the basic characteristi
 ### Exercício 12. Validação de Entrada
 # Solicitar ao usuário um número dentro de um intervalo específico até que a entrada seja válida.
 
-numero = None
-secrets = [1, 3, 4, 5, 6, 99]
+# numero = None
+# secrets = [1, 3, 4, 5, 6, 99]
 
-while numero not in secrets:
-    numero = int(input("Insira um valor inteiro: "))
-    print("Você errou!")
+# while numero not in secrets:
+#     numero = int(input("Insira um valor inteiro: "))
+#     print("Você errou!")
 
-print("Você acertou o segredo👌")
-
-
-
+# print("Você acertou o segredo👌")
 
 
 
 ### Exercício 13. Consumo de API Simulado
 # Simular o consumo de uma API paginada, onde cada "página" de dados é processada em loop até que não haja mais páginas.
+
+pagina_atual = 1
+paginas_totais = 7
+
+while pagina_atual <= paginas_totais:
+    print(f"processando página {pagina_atual}...")
+    time.sleep(2)
+    pagina_atual += 1
+
+print("Páginas processadas")
+
+
+
 
 ### Exercício 14. Tentativas de Conexão
 # Simular tentativas de reconexão a um serviço com um limite máximo de tentativas.
