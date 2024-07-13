@@ -162,39 +162,55 @@ texto = "Here what you learn in this tutorial: You cover the basic characteristi
 ### Exercício 8. Filtragem de Dados Faltantes
 # Objetivo:** Dada uma lista de dicionários representando dados de usuários, filtrar aqueles que têm um campo específico faltando
 
-usuarios = [
-    {"nome": "Alice", "email": "alice@example.com"},
-    {"nome": "Bob", "email": ""},
-    {"nome": "Carol", "email": "carol@example.com"},
-    {"nome": "", "email": "tiago@example.com"}
-]
+# usuarios = [
+#     {"nome": "Alice", "email": "alice@example.com"},
+#     {"nome": "Bob", "email": ""},
+#     {"nome": "Carol", "email": "carol@example.com"},
+#     {"nome": "", "email": "tiago@example.com"}
+# ]
 
-usuarios_validos = []
-usuarios_invalidos = []
+# usuarios_validos = []
+# usuarios_invalidos = []
 
-for usuario in usuarios:
-    if usuario["email"] and usuario["nome"]:
-        usuarios_validos.append(usuario)
-    else:
-        usuarios_invalidos.append(usuario)
+# for usuario in usuarios:
+#     if usuario["email"] and usuario["nome"]:
+#         usuarios_validos.append(usuario)
+#     else:
+#         usuarios_invalidos.append(usuario)
 
-print(usuarios_validos)
-print(usuarios_invalidos)
-
-
-
-
-
-
-
-
-
+# print(usuarios_validos)
+# print(usuarios_invalidos)
 
 
 
 
 ### Exercício 9. Extração de Subconjuntos de Dados
 # Objetivo:** Dada uma lista de números, extrair apenas aqueles que são pares.
+
+numeros = [1, 20, 33, 40 -6, 0, 201, 20, 66, 15, 11]
+
+numeros_pares = []
+numeros_impares = []
+
+for numero in numeros:
+    if numero % 2 == 0:
+        numeros_pares.append(numero)
+    else:
+        numeros_impares.append(numero)
+
+print(numeros_pares)
+print(numeros_impares)
+
+
+
+
+
+
+
+
+
+
+
 
 ### Exercício 10. Agregação de Dados por Categoria
 # Objetivo:** Dado um conjunto de registros de vendas, calcular o total de vendas por categoria.
