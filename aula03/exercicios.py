@@ -112,36 +112,52 @@ import sys
 # texto = "O rato roeu a roupa do rei de Roma."
 texto = "Here what you learn in this tutorial: You cover the basic characteristics of Python dictionaries and learn how to access and manage dictionary data. Once you have finished this tutorial, you should have a good sense of when a dictionary is the appropriate data type to use, and how to do so."
 
-palavras = texto.strip().split(" ")
-palavras_semanticas = []
-contador_de_palavras = {}
+# palavras = texto.strip().split(" ")
+# palavras_semanticas = []
+# contador_de_palavras = {}
 
-for palavra in palavras:
-    if (len(palavra) >= 3):
-        palavras_semanticas.append(palavra)
-print(palavras_semanticas)
+# for palavra in palavras:
+#     if (len(palavra) >= 3):
+#         palavras_semanticas.append(palavra)
+# print(palavras_semanticas)
 
-for palavra in palavras_semanticas:
-    if palavra in contador_de_palavras:
-        contador_de_palavras[palavra] += 1
-    else:
-        contador_de_palavras[palavra] = 1
+# for palavra in palavras_semanticas:
+#     if palavra in contador_de_palavras:
+#         contador_de_palavras[palavra] += 1
+#     else:
+#         contador_de_palavras[palavra] = 1
 
-print(contador_de_palavras)
-
-
-
-
-
-
-
-
-
-
+# print(contador_de_palavras)
 
 
 ### Exercício 7. Normalização de Dados
 # Objetivo:** Normalizar uma lista de números para que fiquem na escala de 0 a 1.
+## (numero - minimo) / (max - minimo)
+
+numeros = [10, 20, 30, 40, 50, 60]
+# numeros = [10, -2, 3, 330, 3, 6.0]
+numeros_normalizados = []
+min_numero = numeros[0]
+max_numero = numeros[0]
+
+for numero in numeros:
+    if numero > max_numero:
+        max_numero = numero
+    if numero < min_numero:
+        min_numero = numero
+
+for numero in numeros:
+    numeros_normalizados.append((numero - min_numero) / (max_numero - min_numero))
+
+print(numeros_normalizados)
+
+
+
+
+
+
+
+
 
 ### Exercício 8. Filtragem de Dados Faltantes
 # Objetivo:** Dada uma lista de dicionários representando dados de usuários, filtrar aqueles que têm um campo específico faltando
