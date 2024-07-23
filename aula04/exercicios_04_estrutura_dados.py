@@ -47,27 +47,38 @@ import math
 
 # Exercicio 05 - Dada a lista ["maçã", "banana", "cereja"] e o dicionário {"maçã": 0.45, "banana": 0.30, "cereja": 0.65}, calcule o preço total da lista de compras.
 
-precos = {"maçã": 0.45, "banana": 0.30, "cereja": 0.65}
-lista_de_compras = {"maçã": 5, "cereja": 50, "banana": 12}
-valor_total = 0
+# precos = {"maçã": 0.45, "banana": 0.30, "cereja": 0.65}
+# lista_de_compras = {"maçã": 5, "cereja": 50, "banana": 12}
+# valor_total = 0
 
-for item in lista_de_compras:
-    # print(item)
-    unidades = lista_de_compras[item]
-    # print(unidades)
-    preco_unitario = precos[item]
-    total_do_item = unidades * preco_unitario
-    print(f"{item} - unidades: {unidades}, Preço unitário: R${preco_unitario}, Total do item: {total_do_item}")
-    valor_total += total_do_item
+# for item in lista_de_compras:
+#     # print(item)
+#     unidades = lista_de_compras[item]
+#     # print(unidades)
+#     preco_unitario = precos[item]
+#     total_do_item = unidades * preco_unitario
+#     print(f"{item} - unidades: {unidades}, Preço unitário: R${preco_unitario}, Total do item: {total_do_item}")
+#     valor_total += total_do_item
 
-print(f"O valor total de compras foi R$ {valor_total}")
-
-
-
+# print(f"O valor total de compras foi R$ {valor_total}")
 
 
 # Exercicio 06 - Dada uma lista de emails, remover todos os duplicados.
 # emails = ["user@example.com", "admin@example.com", "user@example.com", "manager@example.com"]
+
+emails = ["user@example.com", "tiago.chem@gmail.com", "admin@example.com", "user@example.com", "manager@example.com", "tiago.chem@gmail.com"]
+
+# for email in emails:
+#     if emails.count(email) > 1:
+#         emails.remove(email)
+
+emails_unicos = list(set(emails))
+
+
+print(emails_unicos)
+
+
+
 
 # Exercicio 07 - Dada uma lista de idades, filtrar apenas aquelas que são maiores ou iguais a 18.
 
