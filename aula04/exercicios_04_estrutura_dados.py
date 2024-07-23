@@ -94,19 +94,30 @@ import math
 
 # Exercicio 08 - Dada uma lista de dicionários representando pessoas, ordená-las pelo nome.
 
-pessoas = [
-    {"nome": "Alice", "idade": 30},
-    {"nome": "Bob", "idade": 25},
-    {"nome": "Carol", "idade": 20},
-    {"nome": "Bacon", "idade": 20},
-    {"nome": "Amarula", "idade": 20}
-]
+# pessoas = [
+#     {"nome": "Alice", "idade": 30},
+#     {"nome": "Bob", "idade": 25},
+#     {"nome": "Carol", "idade": 20},
+#     {"nome": "Bacon", "idade": 20},
+#     {"nome": "Amarula", "idade": 20}
+# ]
 
-pessoas.sort(key= lambda pessoa: pessoa["nome"])
-print(pessoas)
+# pessoas.sort(key= lambda pessoa: pessoa["nome"])
+# print(pessoas)
 
 # Exercicio 09 - Dado um conjunto de números, calcular a média.
-# numeros = [10, 20, 30, 40, 50]
+numeros = [10, 20, 30, 40, 50]
+soma = 0
+# items = len(numeros)
+
+# for numero in numeros:
+#     soma += numero
+
+# media = soma / items
+media = sum(numeros) / len(numeros)
+print(f"Média: {media}")
+
+
 
 # Exercicio 10 - Dada uma lista de valores, dividir em duas listas: uma para valores pares e outra para ímpares.
 
