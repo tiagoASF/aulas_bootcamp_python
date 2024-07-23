@@ -140,26 +140,32 @@ import math
 
 
 # Exercicio 11 - Dada uma lista de dicionários representando produtos, atualizar o preço de um produto específico.
-produtos = [
-    {"id": 1, "nome": "Teclado", "preço": 100},
-    {"id": 2, "nome": "Mouse", "preço": 80},
-    {"id": 3, "nome": "Monitor", "preço": 300}
-]
+# produtos = [
+#     {"id": 1, "nome": "Teclado", "preço": 100},
+#     {"id": 2, "nome": "Mouse", "preço": 80},
+#     {"id": 3, "nome": "Monitor", "preço": 300}
+# ]
 
 
-id_update_produto = int(input("Informe o Id do produto a ter o preço alterado: "))
-update_produto_preco = float(input("Qual o novo valor: "))
+# id_update_produto = int(input("Informe o Id do produto a ter o preço alterado: "))
+# update_produto_preco = float(input("Qual o novo valor: "))
 
-for produto in produtos:
-    if produto["id"] == id_update_produto:
-        produto["preço"] = update_produto_preco
-        print(produto)
+# for produto in produtos:
+#     if produto["id"] == id_update_produto:
+#         produto["preço"] = update_produto_preco
+#         print(produto)
 
-print(produtos)
+# print(produtos)
 
 # Exercicio 12 - Dados dois dicionários, fundi-los em um único dicionário.
-# dicionario1 = {"a": 1, "b": 2}
-# dicionario2 = {"c": 3, "d": 4}
+dicionario1 = {"a": 1, "b": 2}
+dicionario2 = {"c": 3, "d": 4}
+dicionario_unico = {}
+
+dicionario_unico.update(dicionario1)
+dicionario_unico.update(dicionario2)
+print(dicionario_unico)
+
 
 # Exercicio 13 - Dado um dicionário, criar listas separadas para suas chaves e valores.
 # dicionario = {"a": 1, "b": 2, "c": 3}
