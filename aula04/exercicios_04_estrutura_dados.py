@@ -18,13 +18,32 @@ import math
 
 # Exercicio 03 - Crie um dicionário para armazenar informações de um livro, incluindo título, autor e ano de publicação. Imprima cada informação.
 
-livro = {"titulo":"As intermitências da morte", "autor":"Jose Saramago", "ano":1987}
+# livro = {"titulo":"As intermitências da morte", "autor":"Jose Saramago", "ano":1987}
 
-for k, v in livro.items():
-    print(f"{k}:{v}")
+# for k, v in livro.items():
+#     print(f"{k}:{v}")
 
 
 # Exercicio 04 - Escreva um programa que conta o número de ocorrências de cada caractere em uma string usando um dicionário.
+
+frase = "O rato roeu a roupa do rei de Roma Romualdo"
+frase = frase.strip().lower()
+palavras = frase.split(" ")
+palavras_semanticas = []
+contador_de_palavras = {}
+
+for palavra in palavras:
+    if (len(palavra) > 2):
+        palavras_semanticas.append(palavra)
+
+for palavra in palavras_semanticas:
+    if palavra not in contador_de_palavras:
+        contador_de_palavras[palavra] = 1
+    else:
+        contador_de_palavras[palavra] += 1
+
+print(contador_de_palavras)
+
 
 # Exercicio 05 - Dada a lista ["maçã", "banana", "cereja"] e o dicionário {"maçã": 0.45, "banana": 0.30, "cereja": 0.65}, calcule o preço total da lista de compras.
 
