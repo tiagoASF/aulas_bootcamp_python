@@ -66,21 +66,31 @@ import math
 # Exercicio 06 - Dada uma lista de emails, remover todos os duplicados.
 # emails = ["user@example.com", "admin@example.com", "user@example.com", "manager@example.com"]
 
-emails = ["user@example.com", "tiago.chem@gmail.com", "admin@example.com", "user@example.com", "manager@example.com", "tiago.chem@gmail.com"]
+# emails = ["user@example.com", "tiago.chem@gmail.com", "admin@example.com", "user@example.com", "tiago.chem@gmail.com", "manager@example.com", "tiago.chem@gmail.com"]
 
 # for email in emails:
 #     if emails.count(email) > 1:
 #         emails.remove(email)
 
-emails_unicos = list(set(emails))
-
-
-print(emails_unicos)
-
-
+# # emails_unicos = list(set(emails))
+# print(emails)
 
 
 # Exercicio 07 - Dada uma lista de idades, filtrar apenas aquelas que são maiores ou iguais a 18.
+
+idades = [22, 15, 30, 17, 18]
+# maiores = []
+
+# for idade in idades:
+#     if idade >= 18:
+#         maiores.append(idade)
+
+# print(idades)
+# print(maiores)
+
+idades_validas = [idade for idade in idades if idade >= 18]
+print(idades_validas)
+
 
 # Exercicio 08 - Dada uma lista de dicionários representando pessoas, ordená-las pelo nome.
 
