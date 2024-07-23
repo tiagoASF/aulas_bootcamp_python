@@ -106,22 +106,38 @@ import math
 # print(pessoas)
 
 # Exercicio 09 - Dado um conjunto de números, calcular a média.
-numeros = [10, 20, 30, 40, 50]
-soma = 0
-# items = len(numeros)
+# numeros = [10, 20, 30, 40, 50]
+# soma = 0
+# # items = len(numeros)
 
-# for numero in numeros:
-#     soma += numero
+# # for numero in numeros:
+# #     soma += numero
 
-# media = soma / items
-media = sum(numeros) / len(numeros)
-print(f"Média: {media}")
+# # media = soma / items
+# media = sum(numeros) / len(numeros)
+# print(f"Média: {media}")
 
 
 
 # Exercicio 10 - Dada uma lista de valores, dividir em duas listas: uma para valores pares e outra para ímpares.
 
-# valores = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+valores = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 0]
+impares = []
+pares = []
+
+for valor in valores:
+    if valor % 2 == 0:
+        pares.append(valor)
+    else:
+        impares.append(valor)
+
+print(valores)
+pares.sort()
+impares.sort()
+
+print(impares)
+print(pares)
+
 
 # Exercicio 11 - Dada uma lista de dicionários representando produtos, atualizar o preço de um produto específico.
 # produtos = [
