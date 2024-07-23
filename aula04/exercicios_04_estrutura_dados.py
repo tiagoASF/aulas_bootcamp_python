@@ -121,30 +121,41 @@ import math
 
 # Exercicio 10 - Dada uma lista de valores, dividir em duas listas: uma para valores pares e outra para ímpares.
 
-valores = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 0]
-impares = []
-pares = []
+# valores = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 0]
+# impares = []
+# pares = []
 
-for valor in valores:
-    if valor % 2 == 0:
-        pares.append(valor)
-    else:
-        impares.append(valor)
+# for valor in valores:
+#     if valor % 2 == 0:
+#         pares.append(valor)
+#     else:
+#         impares.append(valor)
 
-print(valores)
-pares.sort()
-impares.sort()
+# print(valores)
+# pares.sort()
+# impares.sort()
 
-print(impares)
-print(pares)
+# print(impares)
+# print(pares)
 
 
 # Exercicio 11 - Dada uma lista de dicionários representando produtos, atualizar o preço de um produto específico.
-# produtos = [
-#     {"id": 1, "nome": "Teclado", "preço": 100},
-#     {"id": 2, "nome": "Mouse", "preço": 80},
-#     {"id": 3, "nome": "Monitor", "preço": 300}
-# ]
+produtos = [
+    {"id": 1, "nome": "Teclado", "preço": 100},
+    {"id": 2, "nome": "Mouse", "preço": 80},
+    {"id": 3, "nome": "Monitor", "preço": 300}
+]
+
+
+id_update_produto = int(input("Informe o Id do produto a ter o preço alterado: "))
+update_produto_preco = float(input("Qual o novo valor: "))
+
+for produto in produtos:
+    if produto["id"] == id_update_produto:
+        produto["preço"] = update_produto_preco
+        print(produto)
+
+print(produtos)
 
 # Exercicio 12 - Dados dois dicionários, fundi-los em um único dicionário.
 # dicionario1 = {"a": 1, "b": 2}
