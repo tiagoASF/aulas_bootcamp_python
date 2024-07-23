@@ -78,27 +78,32 @@ import math
 
 # Exercicio 07 - Dada uma lista de idades, filtrar apenas aquelas que são maiores ou iguais a 18.
 
-idades = [22, 15, 30, 17, 18]
-# maiores = []
+# idades = [22, 15, 30, 17, 18]
+# # maiores = []
 
-# for idade in idades:
-#     if idade >= 18:
-#         maiores.append(idade)
+# # for idade in idades:
+# #     if idade >= 18:
+# #         maiores.append(idade)
 
-# print(idades)
-# print(maiores)
+# # print(idades)
+# # print(maiores)
 
-idades_validas = [idade for idade in idades if idade >= 18]
-print(idades_validas)
+# idades_validas = [idade for idade in idades if idade >= 18]
+# print(idades_validas)
 
 
 # Exercicio 08 - Dada uma lista de dicionários representando pessoas, ordená-las pelo nome.
 
-# pessoas = [
-#     {"nome": "Alice", "idade": 30},
-#     {"nome": "Bob", "idade": 25},
-#     {"nome": "Carol", "idade": 20}
-# ]
+pessoas = [
+    {"nome": "Alice", "idade": 30},
+    {"nome": "Bob", "idade": 25},
+    {"nome": "Carol", "idade": 20},
+    {"nome": "Bacon", "idade": 20},
+    {"nome": "Amarula", "idade": 20}
+]
+
+pessoas.sort(key= lambda pessoa: pessoa["nome"])
+print(pessoas)
 
 # Exercicio 09 - Dado um conjunto de números, calcular a média.
 # numeros = [10, 20, 30, 40, 50]
