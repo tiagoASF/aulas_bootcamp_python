@@ -26,26 +26,45 @@ import math
 
 # Exercicio 04 - Escreva um programa que conta o número de ocorrências de cada caractere em uma string usando um dicionário.
 
-frase = "O rato roeu a roupa do rei de Roma Romualdo"
-frase = frase.strip().lower()
-palavras = frase.split(" ")
-palavras_semanticas = []
-contador_de_palavras = {}
+# frase = "O rato roeu a roupa do rei de Roma Romualdo"
+# frase = frase.strip().lower()
+# palavras = frase.split(" ")
+# palavras_semanticas = []
+# contador_de_palavras = {}
 
-for palavra in palavras:
-    if (len(palavra) > 2):
-        palavras_semanticas.append(palavra)
+# for palavra in palavras:
+#     if (len(palavra) > 2):
+#         palavras_semanticas.append(palavra)
 
-for palavra in palavras_semanticas:
-    if palavra not in contador_de_palavras:
-        contador_de_palavras[palavra] = 1
-    else:
-        contador_de_palavras[palavra] += 1
+# for palavra in palavras_semanticas:
+#     if palavra not in contador_de_palavras:
+#         contador_de_palavras[palavra] = 1
+#     else:
+#         contador_de_palavras[palavra] += 1
 
-print(contador_de_palavras)
+# print(contador_de_palavras)
 
 
 # Exercicio 05 - Dada a lista ["maçã", "banana", "cereja"] e o dicionário {"maçã": 0.45, "banana": 0.30, "cereja": 0.65}, calcule o preço total da lista de compras.
+
+precos = {"maçã": 0.45, "banana": 0.30, "cereja": 0.65}
+lista_de_compras = {"maçã": 5, "cereja": 50, "banana": 12}
+valor_total = 0
+
+for item in lista_de_compras:
+    # print(item)
+    unidades = lista_de_compras[item]
+    # print(unidades)
+    preco_unitario = precos[item]
+    total_do_item = unidades * preco_unitario
+    print(f"{item} - unidades: {unidades}, Preço unitário: R${preco_unitario}, Total do item: {total_do_item}")
+    valor_total += total_do_item
+
+print(f"O valor total de compras foi R$ {valor_total}")
+
+
+
+
 
 # Exercicio 06 - Dada uma lista de emails, remover todos os duplicados.
 # emails = ["user@example.com", "admin@example.com", "user@example.com", "manager@example.com"]
