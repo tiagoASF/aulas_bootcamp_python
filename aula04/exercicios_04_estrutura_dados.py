@@ -1,12 +1,20 @@
 import math
 
 # Exercicio 01 - Crie uma lista com os números de 1 a 10 e use um loop para imprimir cada número elevado ao quadrado.
-numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+# numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+# numeros_auto = list(range(1, 11))
 
-for numero in numeros:
-    print(math.pow(numero, 2))
+# for numero in numeros:
+#     print(math.pow(numero, 2))
 
 # Exercicio 02 - Dada a lista ["Python", "Java", "C++", "JavaScript"], remova o item "C++" e adicione "Ruby".
+
+languages = ["Python", "Java", "C++", "JavaScript"]
+print(languages)
+languages.remove("C++")
+print(languages)
+languages.append("Ruby")
+print(languages)
 
 # Exercicio 03 - Crie um dicionário para armazenar informações de um livro, incluindo título, autor e ano de publicação. Imprima cada informação.
 
