@@ -168,18 +168,39 @@ import math
 
 
 # Exercicio 13 - Dado um dicionário, criar listas separadas para suas chaves e valores.
-dicionario = {"a": 1, "b": 2, "c": 3}
-chaves = []
-valores = []
+# dicionario = {"a": 1, "b": 2, "c": 3}
+# chaves = []
+# valores = []
 
-for k, v in dicionario.items():
-    chaves.append(k)
-    valores.append(v)
+# for k, v in dicionario.items():
+#     chaves.append(k)
+#     valores.append(v)
 
-print(chaves)
-print(valores)
+# print(chaves)
+# print(valores)
 
 
 # Exercicio 14 - Dada uma string, contar a frequência de cada caractere usando um dicionário.
-# texto = "engenharia de dados"
-# frequencia = {}
+texto = "Para ler um arquivo CSV em Python utilizando o módulo nativo, você pode usar a combinação do comando with open... para abrir o arquivo e o método .reader() do módulo csv para ler o arquivo linha por linha. O uso de with assegura que o arquivo será fechado corretamente após sua leitura, mesmo que ocorram erros durante o processo. Abaixo está um exemplo básico de como realizar essa operação."
+
+texto.lower().strip()
+
+palavras = texto.split(" ")
+palavras_semanticas = []
+frequencia = {}
+
+for palavra in palavras:
+    if len(palavra) > 2: 
+        palavra = palavra.replace(".", "")
+        palavra = palavra.replace(",", "")
+        palavras_semanticas.append(palavra)
+
+
+for palavra in palavras_semanticas:
+    if palavra not in frequencia:
+        frequencia[palavra] = 1
+    else: 
+        frequencia[palavra] += 1
+
+print(frequencia)
+
