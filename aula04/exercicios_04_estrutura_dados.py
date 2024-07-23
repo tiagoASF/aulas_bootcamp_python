@@ -158,17 +158,27 @@ import math
 # print(produtos)
 
 # Exercicio 12 - Dados dois dicionários, fundi-los em um único dicionário.
-dicionario1 = {"a": 1, "b": 2}
-dicionario2 = {"c": 3, "d": 4}
-dicionario_unico = {}
+# dicionario1 = {"a": 1, "b": 2}
+# dicionario2 = {"c": 3, "d": 4}
+# dicionario_unico = {}
 
-dicionario_unico.update(dicionario1)
-dicionario_unico.update(dicionario2)
-print(dicionario_unico)
+# dicionario_unico.update(dicionario1)
+# dicionario_unico.update(dicionario2)
+# print(dicionario_unico)
 
 
 # Exercicio 13 - Dado um dicionário, criar listas separadas para suas chaves e valores.
-# dicionario = {"a": 1, "b": 2, "c": 3}
+dicionario = {"a": 1, "b": 2, "c": 3}
+chaves = []
+valores = []
+
+for k, v in dicionario.items():
+    chaves.append(k)
+    valores.append(v)
+
+print(chaves)
+print(valores)
+
 
 # Exercicio 14 - Dada uma string, contar a frequência de cada caractere usando um dicionário.
 # texto = "engenharia de dados"
