@@ -9,14 +9,20 @@ import math
 
 # Exercicio 02 - Dada a lista ["Python", "Java", "C++", "JavaScript"], remova o item "C++" e adicione "Ruby".
 
-languages = ["Python", "Java", "C++", "JavaScript"]
-print(languages)
-languages.remove("C++")
-print(languages)
-languages.append("Ruby")
-print(languages)
+# languages = ["Python", "Java", "C++", "JavaScript"]
+# print(languages)
+# languages.remove("C++")
+# print(languages)
+# languages.append("Ruby")
+# print(languages)
 
 # Exercicio 03 - Crie um dicionário para armazenar informações de um livro, incluindo título, autor e ano de publicação. Imprima cada informação.
+
+livro = {"titulo":"As intermitências da morte", "autor":"Jose Saramago", "ano":1987}
+
+for k, v in livro.items():
+    print(f"{k}:{v}")
+
 
 # Exercicio 04 - Escreva um programa que conta o número de ocorrências de cada caractere em uma string usando um dicionário.
 
